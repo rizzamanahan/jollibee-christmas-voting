@@ -379,48 +379,12 @@ button:hover { transform:scale(1.04); }
   <p>❤️ Good food, good friends, and a Merry Christmas! ❤️</p>
 </div>
 
-<script type="module">
-
-  // Import Firebase
-  import { initializeApp } 
-    from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-
-  // Import Firestore
-  import {
-    getFirestore,
-    collection,
-    addDoc,
-    onSnapshot,
-    query,
-    orderBy,
-    serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
-
-  // Your existing Firebase configuration
-  const firebaseConfig = {
-    apiKey: "YOUR_EXISTING_API_KEY",
-    authDomain: "jollibee-christmas-voting.firebaseapp.com",
-    projectId: "jollibee-christmas-voting",
-    storageBucket: "jollibee-christmas-voting.firebasestorage.app",
-    messagingSenderId: "63723748434",
-    appId: "1:63723748434:web:9b02469b3f95326ab4338b"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-  // Initialize Firestore
-  const db = getFirestore(app);
-
-  console.log("Firebase connected successfully!");
-
-</script>
 
 <script type="module">
     // Import Firebase
     import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
 
-    // Import Firestore
+    // Import Firestore functions
     import {
         getFirestore,
         collection,
@@ -434,7 +398,7 @@ button:hover { transform:scale(1.04); }
         serverTimestamp
     } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
-    // Your Firebase configuration
+    // Firebase Configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDM3TOHYsJ1pOGhJa7hR2Yhm9jpACgyLsE",
         authDomain: "jollibee-christmas-voting.firebaseapp.com",
@@ -446,13 +410,21 @@ button:hover { transform:scale(1.04); }
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
+
+    // Initialize Firestore
     const db = getFirestore(app);
 
-    // Firestore votes collection
+    // Firestore Votes Collection
     const votesCollection = collection(db, "votes");
 
-    console.log("Firebase connected!");
+    console.log("Firebase connected successfully!");
+    console.log("Firestore database initialized!");
+
+    // Your voting functions should go here.
+
 </script>
 
 </body>
 </html>
+
+
